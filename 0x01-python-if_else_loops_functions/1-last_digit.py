@@ -12,11 +12,11 @@ else:
     number = -number
     lastD = -lastD
 
-if lastDigit > 5:
+if lastD > 5:
     print(f"Last digit of {number} is {lastD} and is greater than 5")
 
-elif lastDigit == 0:
+elif lastD == 0:
     print(f"Last digit of {number} is {lastD} and is 0")
 
 else:
-    print(f"Last digit of {number} is {LastD} and is less than 6 and not 0")
+    print(f"Last digit of {number} is {lastD} and is less than 6 and not 0")
