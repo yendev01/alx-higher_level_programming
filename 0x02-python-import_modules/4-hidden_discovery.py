@@ -8,4 +8,4 @@ if __name__ == '__main__':
 
     for i in range(length):
         if files[i][:2] != '__':
-            print(files[1])
+            print(files[i])
