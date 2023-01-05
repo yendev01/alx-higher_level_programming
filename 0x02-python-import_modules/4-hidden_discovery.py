@@ -7,5 +7,5 @@ if __name__ == '__main__':
     length = len(files)
 
     for i in range(length):
-        files[i][:2] != '__'
-        print(files[1])
+        if files[i][:2] != '__':
+            print(files[1])
