@@ -8,3 +8,5 @@ def print_matrix_integer(matrix=[[]]):
             print("{:d}".format(i[j]), end=" ")
         if length > 0:
             print("{}".format(i[length - 1]))
+        else:
+            print()
