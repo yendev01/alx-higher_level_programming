@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 """script that defines a Rectangle class"""
 
 
@@ -20,6 +19,15 @@ class Rectangle:
                 self.__height = height
             else:
                 raise TypeError("height must be >= 0")
+
+    def __str__(self):
+        """prints the rectangle with character #"""
+        st = ""
+        for i in range(self.__height):
+            for j in range(self.__width):
+                st += "#"
+            st += "\n"
+        return st[:-1]
 
     @property
     def width(self):
