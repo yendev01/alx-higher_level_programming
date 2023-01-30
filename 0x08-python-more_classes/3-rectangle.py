@@ -24,6 +24,8 @@ class Rectangle:
     def __str__(self):
         """prints the rectangle with character #"""
         st = ""
+        if self.__height == 0 or self.__width == 0:
+            return st
         for i in range(self.__height):
             for j in range(self.__width):
                 st += "#"
