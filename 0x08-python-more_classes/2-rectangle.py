@@ -34,6 +34,7 @@ class Rectangle:
         else:
             if value >= 0:
                 self.__width = value
+                return self.__width
             else:
                 raise ValueError("width must be >= 0")
 
@@ -50,6 +51,7 @@ class Rectangle:
         else:
             if value >= 0:
                 self.__height = value
+                return self.__height
             else:
                 raise TypeError("height must be >= 0")
 
