@@ -3,6 +3,7 @@
 script that contains class BaseGeometry
 """
 
+
 class BaseGeometry():
     """class with method area(self) and raises an exception"""
     def area(self):
