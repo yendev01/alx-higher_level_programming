@@ -9,8 +9,10 @@ def matrix_divided(matrix, div):
     if type(matrix) is not list:
         raise TypeError("matrix must be a matrix \
 (list of lists) of integers/floats")
-    count = len(matrix[0])
+    count = None
     for i in matrix:
+        if count is None:
+            count = len(i)
         if type(i) is not list:
             raise TypeError("matrix must be a matrix \
 (list of lists) of integers/floats")
