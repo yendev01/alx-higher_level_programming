@@ -3,6 +3,7 @@
 module that contains add_integer function
 """
 
+
 def add_integer(a, b=98):
     """function that adds integers"""
     if type(a) is not int and type(a) is not float:

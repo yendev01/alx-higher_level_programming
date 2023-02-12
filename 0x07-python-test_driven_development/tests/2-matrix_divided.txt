@@ -1,0 +1,72 @@
+The ``0-add_integer`` module
+============================
+
+Using ``matrix_divided``
+------------------------
+
+Importing the function from the module:
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+Checking module docstring:
+    >>> m = __import__('2-matrix_divided').__doc__
+    >>> len(m) > 1
+    True
+
+Checking function docstring:
+    >>> f = __import__('2-matrix_divided').matrix_divided.__doc__
+    >>> len(m) > 1
+    True
+
+Checking for passing 0 as div:
+    >>> matrix = [[12, 4, 6], [11, 4, 9]]
+    >>> matrix_divided(matrix, 0)
+    Traceback (most recent call last):
+    ...
+    ZeroDivisionError: division by Zero
+
+checking for passing negative as div:
+    >>> matrix = [[12, 4, 6], [11, 4, 9]]
+    >>> matrix_divided(matrix, -1)
+    [[-12.0, -4.0, -6.0], [-11.0, -4.0, -9.0]]
+
+
+Checking for passing None as matrix:
+    >>> matrix_divided(None, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+checking for passing None as div:
+    >>> matrix =  [[3,5], [8,32]]
+    >>> matrix_divided(matrix, None)
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
+
+Checking for element of list being a string:
+    >>> matrix = [[7,9], "9"]
+    >>> matrix_divided(matrix, 3)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for a element of the sub-list being a string:
+    >>> matrix = [[5,6,"7"], [7,89,6]]
+    >>> matrix_divided(matrix, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+Checking for unequal row sizes:
+    >>> matrix = [[4,6,7], [9,8]]
+    >>> matrix_divided(matrix, 4)
+    Traceback (most recent call last):
+    ...
+    TypeError: Each row of the matrix must have the same sizes
+
+checking for passing list as div:
+    >>> matrix = [[8,4], [64, 16]]
+    >>> matrix_divided(matrix, [1,2])
+    Traceback (most recent call last):
+    ...
+    TypeError: div must be a number
