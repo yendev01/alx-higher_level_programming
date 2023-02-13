@@ -8,7 +8,7 @@ import json
 def to_json_string(my_obj):
     """function that returns JSON representation of an object
     Args:
-	my_obj
+       my_obj
 
     Raises:
         Exception when the object can't be encoded
